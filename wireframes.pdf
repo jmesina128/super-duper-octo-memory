@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IS 202 Lab 4 — Site Wireframes & Sitemap</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      margin: 28px;
+      line-height: 1.4;
+    }
+    h1, h2, h3 {
+      margin: 0 0 10px 0;
+    }
+    .meta {
+      color: #475569;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .wire-page {
+      page-break-after: always;
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+      border-bottom: 2px dashed #94a3b8;
+    }
+    .wire-page:last-child {
+      page-break-after: auto;
+      border-bottom: none;
+    }
+    .box {
+      border: 2px solid #1e293b;
+      background: #f1f5f9;
+      padding: 12px;
+      margin: 10px 0;
+      text-align: center;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    .box small {
+      display: block;
+      font-weight: 400;
+      color: #475569;
+      margin-top: 4px;
+    }
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .row-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .mobile-preview {
+      max-width: 340px;
+      margin: 16px auto 0 auto;
+      border: 2px solid #334155;
+      padding: 12px;
+      border-radius: 10px;
+      background: #ffffff;
+    }
+    @media print {
+      .wire-page {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1: Sitemap -->
+  <section class="wire-page">
+    <h1>IS 202 Lab 4 — Portfolio Sitemap & Structure</h1>
+    <p class="meta">Created prior to Bootstrap coding | Responsive 5-Page Architecture</p>
+
+    <div class="box" style="max-width: 280px; margin: 18px auto;">
+      Home (index.html)
+      <small>Hero, IS 202 Highlights, Wireframes Link</small>
+    </div>
+
+    <div class="row-4">
+      <div class="box">
+        About Me
+        <small>(about.html)<br>Bio & IS 202 Journey</small>
+      </div>
+      <div class="box">
+        Projects
+        <small>(projects.html)<br>3–5 Projects & Tech Stack</small>
+      </div>
+      <div class="box">
+        Skills & Resume
+        <small>(skills.html)<br>Skills, Resume & PDFs</small>
+      </div>
+      <div class="box">
+        Contact
+        <small>(contact.html)<br>Form & Social Links</small>
+      </div>
+    </div>
+
+    <div class="box" style="margin-top: 20px;">
+      Shared Across All Pages: Sticky Navbar + Custom CSS (css/style.css) + Bootstrap 5 Grid + Footer
+    </div>
+  </section>
+
+  <!-- Page 2: Home Wireframe -->
+  <section class="wire-page">
+    <h2>Wireframe 1: Home Page (index.html)</h2>
+    <div class="box">[Top Navbar: Brand Name Left | Home • About • Projects • Skills • Contact Right]</div>
+    <div class="box" style="padding: 36px;">
+      [Hero Section: Main Headline + Intro + Primary & Secondary CTA Buttons]
+    </div>
+    <div class="row-3">
+      <div class="box" style="padding: 24px;">[IS 202 Card 1: SDLC & System Design]</div>
+      <div class="box" style="padding: 24px;">[IS 202 Card 2: Databases & Docker]</div>
+      <div class="box" style="padding: 24px;">[IS 202 Card 3: UI/UX & Git]</div>
+    </div>
+    <div class="box">[Wireframes PDF Callout Banner]</div>
+    <div class="box">[Footer]</div>
+  </section>
+
+  <!-- Page 3: About & Projects Wireframes -->
+  <section class="wire-page">
+    <h2>Wireframe 2 & 3: About Me & Projects</h2>
+    <div class="box">[Top Navbar]</div>
+    <div class="row-2">
+      <div class="box" style="padding: 28px;">[About: Avatar / Bio / IS 202 Growth Cards]</div>
+      <div class="box" style="padding: 28px;">[Projects: 2x2 Grid of Project Cards + Tech Badges]</div>
+    </div>
+    <div class="row-2">
+      <div class="box">[Project Card A: Database / 3NF ERD]</div>
+      <div class="box">[Project Card B: Web App / UI/UX]</div>
+    </div>
+    <div class="box">[Footer]</div>
+  </section>
+
+  <!-- Page 4: Skills, Resume, Contact & Mobile Layout -->
+  <section class="wire-page">
+    <h2>Wireframe 4 & 5: Skills/Resume, Contact & Mobile View</h2>
+    <div class="row-2">
+      <div>
+        <div class="box">[Skills Grid: Systems/DB | Web/UI/UX | Tools/Docker]</div>
+        <div class="box" style="padding: 24px;">[Resume Section + Download Resume PDF Button]</div>
+        <div class="box" style="padding: 24px;">[Contact Form: Name, Email, Message, Submit]</div>
+      </div>
+      <div class="mobile-preview">
+        <h3>Mobile Layout (~375px)</h3>
+        <div class="box">[Navbar + Hamburger Toggle]</div>
+        <div class="box">[Stacked Hero & Buttons]</div>
+        <div class="box">[Stacked Cards (1 Column)]</div>
+        <div class="box">[Stacked Form / Footer]</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
